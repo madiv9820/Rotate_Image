@@ -1,0 +1,120 @@
+[
+  {
+    "title": "Empty Matrix",
+    "description": "🫙 Tests the edge case where the matrix contains no elements.",
+    "input": [],
+    "output": []
+  },
+  {
+    "title": "Single Element Matrix",
+    "description": "🎯 Verifies that a 1x1 matrix remains completely unchanged after rotation.",
+    "input": [
+      [1]
+    ],
+    "output": [
+      [1]
+    ]
+  },
+  {
+    "title": "2x2 Even Matrix",
+    "description": "🔲 Tests the simplest multi-element rotation for an even-dimension matrix.",
+    "input": [
+      [1, 2],
+      [3, 4]
+    ],
+    "output": [
+      [3, 1],
+      [4, 2]
+    ]
+  },
+  {
+    "title": "3x3 Odd Matrix",
+    "description": "🎲 Tests an odd-dimension matrix where the center element must pivot exactly in place.",
+    "input": [
+      [1, 2, 3],
+      [4, 5, 6],
+      [7, 8, 9]
+    ],
+    "output": [
+      [7, 4, 1],
+      [8, 5, 2],
+      [9, 6, 3]
+    ]
+  },
+  {
+    "title": "4x4 Complex Matrix",
+    "description": "🧩 Validates multiple inner and outer layers of rotation using a larger grid with non-sequential values.",
+    "input": [
+      [5, 1, 9, 11],
+      [2, 4, 8, 10],
+      [13, 3, 6, 7],
+      [15, 14, 12, 16]
+    ],
+    "output": [
+      [15, 13, 2, 5],
+      [14, 3, 4, 1],
+      [12, 6, 8, 9],
+      [16, 7, 10, 11]
+    ]
+  },
+  {
+    "title": "5x5 Matrix (Multiple Rings)",
+    "description": "🍩 Tests a larger odd-dimension matrix requiring two full outer ring rotations plus a center pivot.",
+    "input": [
+      [1, 2, 3, 4, 5],
+      [6, 7, 8, 9, 10],
+      [11, 12, 13, 14, 15],
+      [16, 17, 18, 19, 20],
+      [21, 22, 23, 24, 25]
+    ],
+    "output": [
+      [21, 16, 11, 6, 1],
+      [22, 17, 12, 7, 2],
+      [23, 18, 13, 8, 3],
+      [24, 19, 14, 9, 4],
+      [25, 20, 15, 10, 5]
+    ]
+  },
+  {
+    "title": "Negative and Zero Values",
+    "description": "🥶 Ensures the logic holds up regardless of integer sign or zero values.",
+    "input": [
+      [-1, 0, -2],
+      [4, -5, 6],
+      [-7, 8, -9]
+    ],
+    "output": [
+      [-7, 4, -1],
+      [8, -5, 0],
+      [-9, 6, -2]
+    ]
+  },
+  {
+    "title": "Duplicate Values",
+    "description": "👯‍♀️ Verifies rotation when elements are not strictly unique, preventing value-swapping bugs.",
+    "input": [
+      [2, 2, 2],
+      [2, 9, 2],
+      [2, 2, 2]
+    ],
+    "output": [
+      [2, 2, 2],
+      [2, 9, 2],
+      [2, 2, 2]
+    ]
+  },
+  {
+    "title": "Non-Sequential Values",
+    "description": "🔀 Ensures the rotation doesn't secretly rely on numbers being in an expected ascending order.",
+    "input": [
+      [99, 12, 45],
+      [33, 1, 88],
+      [14, 27, 56]
+    ],
+    "output": [
+      [14, 33, 99],
+      [27, 1, 12],
+      [56, 88, 45]
+    ]
+  }
+]
