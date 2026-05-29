@@ -57,4 +57,37 @@ matrix = [[5,1,9,11],[2,4,8,10],[13,3,6,7],[15,14,12,16]]
 - **`1 <= n <= 20`**
 - **`-1000 <= matrix[i][j] <= 1000`**
 
+### 🛣️ Approaches
+
+| Feature | [🧅 Simulation](docs/simulation.md) | [✨ Transpose & Reverse](docs/simulation.md) |
+| :--- | :--- | :--- |
+| **Core Concept** | Ring-by-ring 4-way swaps | Linear algebra symmetries |
+| **Time Complexity** | `O(n^2)` | `O(n^2)` |
+| **Space Complexity** | `O(1)` | `O(1)` |
+| **Memory Accesses** | 1 pass (Highly optimal) | 2 passes (Slight overhead) |
+| **Code Readability** | Low | High |
+| **Bug Potential** | High (Off-by-one errors) | Low |
+
+### 📂 Repository Structure
+
+```text
+📦 matrix-rotation-in-place
+ ┣ 📂 docs                                contains comprehensive markdown documentation
+ ┃ ┣ 📜 approach-1-simulation.md
+ ┃ ┗ 📜 approach-2-transpose-reverse.md
+ ┣ 📂 source                              core execution code
+ ┃ ┣ 📜 approaches.py                     holds the actual algorithm implementations
+ ┃ ┗ 📜 solution.py                       serves as the main entry point/interface for the runner
+ ┗ 📂 test                                testing suite used to validate the algorithms against various edge cases
+   ┣ 📜 cases.json                        holds the structured input/output test data
+   ┗ 📜 test.py                           testing script that feeds the JSON data into the source algorithms
+```
+
+### 🚀 How to Run the Tests
+
+To execute the test suite and validate both algorithms against the JSON test cases, run the following command from the root of the repository:
+
+```bash
+python3 -m test.test -v
+```
 ---
