@@ -59,7 +59,7 @@ matrix = [[5,1,9,11],[2,4,8,10],[13,3,6,7],[15,14,12,16]]
 
 ### 🛣️ Approaches
 
-| Feature | [🧅 Simulation](docs/simulation.md) | [✨ Transpose & Reverse](docs/simulation.md) |
+| Feature | [🧅 Simulation](docs/simulation.md) | [✨ Transpose & Reverse](docs/tranpose_n_reverse.md) |
 | :--- | :--- | :--- |
 | **Core Concept** | Ring-by-ring 4-way swaps | Linear algebra symmetries |
 | **Time Complexity** | `O(n^2)` | `O(n^2)` |
